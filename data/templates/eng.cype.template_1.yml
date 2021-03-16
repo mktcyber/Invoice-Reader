@@ -1,0 +1,79 @@
+issuer: CypeFinland
+
+keywords:
+  - CypeFinland
+  - Invoice
+
+fields:
+  total: {
+    parser: regex,
+    regex: 'Total.*\$(\d+\.?\d+)',
+    type: float
+  }
+  subtotal: {
+    parser: regex,
+    regex: 'Subtotal.*\$(\d+\.?\d+)',
+    type: float
+  }
+  date: {
+    parser: regex,
+    regex: 'Date.*\s+(\d{4}-\d{2}.\d{2})',
+    type: date
+  }
+  invoice_number: {
+    parser: regex,
+    regex: 'Invoice \#.*\s+(\d+)',
+  }
+  discount: {
+    parser: regex,
+    regex: 'Discount.*\$(\d+\.?\d+)',
+    type: float
+  }
+  tax_rate: {
+    parser: regex,
+    regex: 'Tax Rate.*(\d+\.?\d*%)',
+  }
+  amount_taxed: {
+    parser: regex,
+    regex: 'Tax.*\$(\d+\.?\d+)',
+    type: float
+  }
+  pay_deadline: {
+    parser: regex,
+    regex: 'Payment Due by.*\s+(\d{4}-\d{2}.\d{2})',
+    type: date
+  }
+  customer_number: {
+    parser: regex,
+    regex: 'Customer \#.*\s+(\d+)'
+  }
+  telephone: {
+    parser: static,
+    value: '+ 1-541-754-3010'
+  }
+  website: {
+    parser: static,
+    value: 'https://www.tunninen.fi'
+  }
+  items: {
+    parser: lines,
+    start: Description\s+Unit Cost\s+Quantity\s+Amount,
+    end: Special notes and instructions\s+,
+    line: '(?P<item_name>(\w+(\s\w+)*)+)\s+(?P<unit_cost>(\d*.?\d*))\s+(?P<quantity>\d*)\s+(?P<total_amount>(\d*.?\d*))',
+    types: {
+      quantity: int
+    }
+  }
+
+options:
+  currency: USD
+  date_formats:
+    - '%Y-%m-%d'
+  languages:
+    - en
+  
+required_fields:
+  - total
+  - date
+  - invoice_number
+  - items

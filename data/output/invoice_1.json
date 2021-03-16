@@ -1,0 +1,48 @@
+{
+    "issuer": "CypeFinland",
+    "total": 4400.75,
+    "subtotal": 4215.0,
+    "date": "2021-01-01",
+    "invoice_number": "010146",
+    "discount": 25.0,
+    "tax_rate": "5%",
+    "amount_taxed": 210.75,
+    "pay_deadline": "2021-02-01",
+    "customer_number": "12345",
+    "telephone": "+ 1-541-754-3010",
+    "website": "https://www.tunninen.fi",
+    "items": [
+        {
+            "item_name": "School Bag",
+            "unit_cost": "$100",
+            "quantity": 2,
+            "total_amount": "$200"
+        },
+        {
+            "item_name": "Pencil",
+            "unit_cost": "$10",
+            "quantity": 5,
+            "total_amount": "$50"
+        },
+        {
+            "item_name": "Laptop",
+            "unit_cost": "$900",
+            "quantity": 1,
+            "total_amount": "$900"
+        },
+        {
+            "item_name": "Desktop",
+            "unit_cost": "$1500",
+            "quantity": 2,
+            "total_amount": "$3000"
+        },
+        {
+            "item_name": "Remote Controller",
+            "unit_cost": "$65",
+            "quantity": 1,
+            "total_amount": "$65"
+        }
+    ],
+    "currency": "USD",
+    "desc": "Invoice from CypeFinland"
+}

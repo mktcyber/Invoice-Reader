@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<invoice>
+  <issuer>CypeFinland</issuer>
+  <total>4400.75</total>
+  <subtotal>4215.0</subtotal>
+  <date>2021-01-01</date>
+  <invoice_number>010146</invoice_number>
+  <discount>25.0</discount>
+  <tax_rate>5%</tax_rate>
+  <amount_taxed>210.75</amount_taxed>
+  <pay_deadline>2021-02-01</pay_deadline>
+  <customer_number>12345</customer_number>
+  <telephone>+ 1-541-754-3010</telephone>
+  <website>https://www.tunninen.fi</website>
+  <items>
+    <item>
+      <item_name>School Bag</item_name>
+      <unit_cost>$100</unit_cost>
+      <quantity>2</quantity>
+      <total_amount>$200</total_amount>
+    </item>
+    <item>
+      <item_name>Pencil</item_name>
+      <unit_cost>$10</unit_cost>
+      <quantity>5</quantity>
+      <total_amount>$50</total_amount>
+    </item>
+    <item>
+      <item_name>Laptop</item_name>
+      <unit_cost>$900</unit_cost>
+      <quantity>1</quantity>
+      <total_amount>$900</total_amount>
+    </item>
+    <item>
+      <item_name>Desktop</item_name>
+      <unit_cost>$1500</unit_cost>
+      <quantity>2</quantity>
+      <total_amount>$3000</total_amount>
+    </item>
+    <item>
+      <item_name>Remote Controller</item_name>
+      <unit_cost>$65</unit_cost>
+      <quantity>1</quantity>
+      <total_amount>$65</total_amount>
+    </item>
+  </items>
+  <currency>USD</currency>
+  <desc>Invoice from CypeFinland</desc>
+</invoice>
